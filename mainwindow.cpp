@@ -6,9 +6,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <unistd.h>
+#include <stdio.h>
 #include <sys/types.h>
-#include <pwd.h>
 #include <map>
 #include <sstream>
 #include <stdexcept>
@@ -19,7 +18,9 @@
 #include <QMessageBox>
 #include <utility>
 #include <QProcess>
+#include <stdlib.h>
 #include <QDebug>
+#include "winhelper.h"
 #include <QClipboard>
 #include "main.h"
 #include <vector>
@@ -74,14 +75,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     writeLog("UI launched...");
 
-    struct passwd *pw = getpwuid(getuid());
-    const char *homedir = pw->pw_dir;
-    char result[100];
-    strcpy(result,homedir);
-    strcat(result,"/.config/jamesdsp/audio.conf");
-    char result2[100];
-    strcpy(result2,homedir);
-    strcat(result2,"/.config/jamesdsp/ui.conf");
+    char result[100] = "Z:/JamesDSP/audio.conf";
+    char result2[100] = "Z:/JamesDSP/ui.conf";
+    char homedir[100] = "Z:/JamesDSP";
+
     path = result;
     appcpath = result2;
 

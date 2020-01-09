@@ -5,8 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <QDialog>
-#include <unistd.h>
-#include <pwd.h>
+
 #include <QCloseEvent>
 #include <cstdio>
 #include <cstdlib>
@@ -27,12 +26,8 @@ settings::settings(QWidget *parent) :
     lockslot = true;
     connect(ui->styleSelect,SIGNAL(currentIndexChanged(const QString&)),this,SLOT(changeStyle(const QString&)));
     connect(ui->paletteSelect,SIGNAL(currentIndexChanged(const QString&)),this,SLOT(changePalette(const QString&)));
-    connect(ui->paletteConfig,SIGNAL(clicked()),this,SLOT(openPalConfig()));
-    struct passwd *pw = getpwuid(getuid());
-    const char *homedir = pw->pw_dir;
-    char result[100];
-    strcpy(result,homedir);
-    strcat(result,"/.config/jamesdsp/audio.conf");
+
+    char result[100] = "Z:/JamesDSP/audio.conf";
 
     string path = mainwin->getPath();
     string style_sheet = mainwin->getStylesheet();

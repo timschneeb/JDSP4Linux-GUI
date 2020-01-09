@@ -2,8 +2,6 @@
 #include "ui_preset.h"
 #include "main.h"
 #include <QDir>
-#include <pwd.h>
-#include <unistd.h>
 #include <sys/types.h>
 #include <QString>
 #include <QCloseEvent>
