@@ -15,6 +15,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QApplication::setQuitOnLastWindowClosed( false );
     app = &a;
+ 
+    QLocale::setDefault(QLocale::c());
+    setlocale(LC_NUMERIC, "C");
+ 
     MainWindow w;
     mainwin = &w;
    // w.setFixedSize(w.geometry().width(),w.geometry().height());
