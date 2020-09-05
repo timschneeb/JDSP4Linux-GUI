@@ -8,6 +8,7 @@
 #include <QApplication>
 #include <string>
 #include <iostream>
+#include <clocale>
 
 using namespace std;
 int main(int argc, char *argv[])
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
     app = &a;
  
     QLocale::setDefault(QLocale::c());
-    setlocale(LC_NUMERIC, "C");
+    std::setlocale(LC_NUMERIC, "C");
  
     MainWindow w;
     mainwin = &w;
