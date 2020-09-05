@@ -6,6 +6,7 @@
 #include "main.h"
 #include "settings.h"
 #include <QApplication>
+#include <QLocale>
 #include <string>
 #include <iostream>
 #include <clocale>
