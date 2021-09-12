@@ -1,5 +1,7 @@
 # JDSP4Linux-GUI
 
+# Project moved to [Audio4Linux/JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux)
+
 User Interface for JDSP4Linux [https://github.com/ThePBone/JDSP4Linux](https://github.com/ThePBone/JDSP4Linux)
 * Telegram: @ThePBone
 * [Releases](https://github.com/ThePBone/JDSP4Linux-GUI/releases)
